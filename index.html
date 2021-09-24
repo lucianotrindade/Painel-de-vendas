@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="container-menu">
+        <!--<img src="./assets/img/logoTipo.png"
+            alt="imagem com o nome ADERE colou, ta colado 100% com você nas cores verde e amarelo"> -->
+        <ul>
+            <li><a title="Gráficos" href="#"><i class="far fa-chart-bar"></i></a></li>
+            <li><a title="Foco" href="#"><i class="fas fa-crosshairs"></i></a></li>
+        </ul>
+    </header>
+
+    <main class="container-principal">
+        <div class="card-1 estilo-card sombra">
+            <h2>Faturamento Líquido mês</h2>
+            <p>R$19.250.540</p>
+        </div>
+        <div class="card-2 estilo-card sombra">
+            <h2>Faturamento Dupla-face</h2>
+            <p>R$520.000,00</p>
+        </div>
+        <div class="card-3 estilo-card sombra">
+            <h2>Valor Ticket-Médio</h2>
+            <p>R$ 54,95</p>
+        </div>
+        <div class="card-4 estilo-card sombra">
+            <h2>Qtd Clientes atendidos</h2>
+            <p>1.520</p>
+        </div>
+        <div class="card-5 estilo-card sombra">
+            <h2>Qtd Clientes novos</h2>
+            <p>32</p>
+        </div>
+
+        <div class="graf-1 sombra">
+            <canvas class="graf-01 grafic"></canvas>
+        </div>
+        <div class="graf-2 sombra">
+            <canvas class="graf-02"></canvas>
+        </div>
+        <div class="graf-3 sombra">
+            <canvas class="graf-03"></canvas>
+        </div>
+        <div class="graf-4 sombra">
+            <canvas class="graf-04"></canvas>
+        </div>
+        <div class="graf-5 sombra">
+            <canvas class="graf-05"></canvas>
+        </div>
+        <div class="graf-6 sombra">
+            <canvas class="graf-06"></canvas>
+        </div>
+    </main>
+
+    <footer class="container-final">
+        <h3>by Trindade</h3>
+    </footer>
+
+    <script src="./node_modules/chart.js/dist/chart.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

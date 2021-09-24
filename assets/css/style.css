@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+
+:root {
+    --cor-menu: rgba(235, 236, 235, 0.459);
+    --cor-borda: #DA291C;
+    --cor-cards: rgb(244, 246, 250);
+}
+/*Retirando a margem e pandding do layout*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*Desenvolvendo o Grid Layout -----------------------------------------------------*/
+body {
+    display: grid;
+    grid-template-rows: 8% 86% 6%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "container-menu"
+    "container-principal"
+    "container-final";
+    height: 100vh;
+}
+
+.container-menu {
+    display: flex;
+    justify-content: space-between;
+    grid-area: container-menu;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-bottom: 3px solid var(--cor-borda);
+    height: 50px;
+}
+
+.container-principal {
+    grid-area: container-principal;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.container-final {
+    grid-area: container-final;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    background-color: var(--cor-borda) ;
+}
+
+/*Estilizando a imagem do menu -------------------------------------------------------*/
+
+.container-menu img {
+    width: 150px;
+    margin-left: 10px;
+}
+/*Estilizando os icones do menu*/
+
+.container-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container-menu ul li a{
+    display: flex;
+    margin: 20px;
+  
+}
+
+.container-menu  i{
+   color: var(--cor-borda);
+   font-size: 20px;
+}
+
+/*Display GRID do menu principal*/
+.container-principal {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 19.5%);
+    grid-template-rows: repeat(5, 19.3%);
+    gap: 4px;
+    margin-top: 5px;
+}
+/* Distribuição dos cards*/
+.card-1 {
+    background-color: var(--cor-menu);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card-2 {
+    background-color: var(--cor-menu);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card-3 {
+    background-color: var(--cor-menu);
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card-4 {
+    background-color: var(--cor-menu);
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card-5 {
+    background-color: var(--cor-menu);
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*Estilo único para os cards paragrafo e titulo*/
+.estilo-card h2 {
+    font-size: 95%;
+    margin-top: 10px;
+}
+
+.estilo-card p {
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 11px;
+    
+}
+
+/*Sobra dos cards e gráficos*/
+.sombra {
+    box-shadow: 1px 1px 1px 1px rgb(177, 174, 174);
+}
+
+
+/*Distribuição dos gráficos*/
+.graf-1 {
+    background-color: var(--cor-menu);
+    grid-column: 1 / 3 ;
+    grid-row: 2 / 4; 
+    border-radius: 10px;  
+    
+}
+
+.graf-2 {
+    background-color: var(--cor-menu);
+    grid-column: 1 / 3 ;
+    grid-row: 4 / 6;
+    border-radius: 10px;
+}
+.graf-3 {
+    background-color: var(--cor-menu);
+    grid-column: 4 / 6 ;
+    grid-row: 2 / 4;
+    border-radius: 10px;
+}
+.graf-4 {
+    background-color: var(--cor-menu);
+    grid-column: 4 / 6;
+    grid-row: 4 / 6;
+    border-radius: 10px;
+}
+.graf-5 {
+    background-color: var(--cor-menu);
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    border-radius: 10px;
+}
+.graf-6 {
+    background-color: var(--cor-menu);
+    grid-column: 3 / 4;
+    grid-row: 4 / 6;
+    border-radius: 10px;
+}
+
+
+
+/*Estilizando o rodape*/
+
+.container-final {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 10px;
+}
+
+.container-final h3 {
+   margin-left: 5px;
+   color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Desenvolvendo o Grid do container principal onde vai ficar um menu e gráficos ----*/
+/*
+.container-principal {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-areas: 
+    "info-colaborador"
+    "container-graf";
+    margin-top: 3px;
+    margin-bottom: 3px;
+  
+}
+
+.info-colaborador {
+    grid-area: info-colaborador;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: var(--cor-menu);
+    height: 100%;
+}
+*/
+
+/*Estilizando o menu lateral*/
+/*
+.id-colaborador {
+    width: 100%;
+}
+
+.id-colaborador img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.id-colaborador h2 {
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.container-opcoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    font-size: 12px;
+}
+
+.container-opcoes ul li {
+    margin-top: 10px;
+    
+}
+*/
